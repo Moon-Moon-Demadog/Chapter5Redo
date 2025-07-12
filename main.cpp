@@ -8,7 +8,10 @@ int main()
   ifstream inputFile;
   string filename;
   string line;
-  int namecount;
+  string High;
+  string Low;
+  string name;
+  int namecount = 0;
 
   cout<< "Name of file : " << endl;
   cin>> filename;
@@ -16,6 +19,15 @@ int main()
   inputFile.open(filename);
   if (inputFile.is_open())
   {
+    while (getline (inputFile, name))
+      {
+        if (High < name){
+          High = name;
+        } else if ( Low < name) {
+          Low = name;
+        }
+        cout<< High << " Is first in line and " << Low << " is last." << endl;
+      }
     while (getline(inputFile,line))
       {
         namecount++;
