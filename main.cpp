@@ -15,12 +15,10 @@ int main()
       cout<< current_pattern << endl;
       i++;
     }
-while (i>0)
+for(int k = 0; k<10;++k )
   {
     cout<< current_pattern<< endl;
-    current_pattern = "";
-    current_pattern += pattern_char;
-    i--;
+    current_pattern.pop_back();
   }
-    
+   return 0; 
 }
