@@ -9,11 +9,6 @@ int main()
   int population, days;
   double increase;
   string name;
-  char stop = d;
-
-  cout<< "What is the name of your organism :"<< endl;
-  getline(cin,name, stop)>> name;
-  cout<< "\n";
 
   cout<< "Enter starting population :"<< endl;
   cout<< "\n";
@@ -37,6 +32,7 @@ int main()
       cout<< "Invalid input."<< endl;
       cout<< "Enter a percentage greater than zero :"<< endl;
       cin.clear();
+      cin.ignore();
       cout<< "\n";
       cin>> increase;
     }
@@ -52,9 +48,15 @@ int main()
       cout<< "Invalid input."<< endl;
       cout<< "Enter a number great than zero :"<< endl;
       cin.clear();
+      cin.ignore();
       cout<< "\n";
       cin>> days;
     }
+  cout<< "What is the name of your organism :"<< endl;
+  
+  getline(cin,name);
+  cout<< name << " is a great name!"<< endl;
+  
   double increase_Population = population * increase_Mulitply;
   double total_Growth = increase_Population * days;
 
