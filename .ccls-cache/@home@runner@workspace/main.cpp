@@ -19,6 +19,7 @@ int main()
       cout<< "Invalid input."<< endl;
       cout<< "Enter a number greater than zero :"<< endl;
       cin.clear();
+      cin.ignore();
       cout<< "\n";
       cin>> population;
     }
@@ -53,8 +54,11 @@ int main()
       cin>> days;
     }
   cout<< "What is the name of your organism :"<< endl;
-  
+ 
+  cin.clear();
+  cin.ignore();
   getline(cin,name);
+  
   cout<< name << " is a great name!"<< endl;
   
   double increase_Population = population * increase_Mulitply;
